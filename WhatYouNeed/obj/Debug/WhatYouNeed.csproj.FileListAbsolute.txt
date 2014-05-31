@@ -1,0 +1,78 @@
+D:\WhatYouNeed\WhatYouNeed\bin\WhatYouNeed.dll
+D:\WhatYouNeed\WhatYouNeed\bin\WhatYouNeed.pdb
+D:\WhatYouNeed\WhatYouNeed\bin\Microsoft.Web.Infrastructure.dll
+D:\WhatYouNeed\WhatYouNeed\bin\Newtonsoft.Json.dll
+D:\WhatYouNeed\WhatYouNeed\bin\System.Net.Http.Formatting.dll
+D:\WhatYouNeed\WhatYouNeed\bin\System.Web.Helpers.dll
+D:\WhatYouNeed\WhatYouNeed\bin\System.Web.Http.dll
+D:\WhatYouNeed\WhatYouNeed\bin\System.Web.Http.WebHost.dll
+D:\WhatYouNeed\WhatYouNeed\bin\System.Web.Mvc.dll
+D:\WhatYouNeed\WhatYouNeed\bin\System.Web.Razor.dll
+D:\WhatYouNeed\WhatYouNeed\bin\System.Web.WebPages.Deployment.dll
+D:\WhatYouNeed\WhatYouNeed\bin\System.Web.WebPages.dll
+D:\WhatYouNeed\WhatYouNeed\bin\System.Web.WebPages.Razor.dll
+D:\WhatYouNeed\WhatYouNeed\bin\Newtonsoft.Json.xml
+D:\WhatYouNeed\WhatYouNeed\bin\System.Net.Http.Formatting.xml
+D:\WhatYouNeed\WhatYouNeed\bin\System.Web.Helpers.xml
+D:\WhatYouNeed\WhatYouNeed\bin\System.Web.Http.xml
+D:\WhatYouNeed\WhatYouNeed\bin\System.Web.Http.WebHost.xml
+D:\WhatYouNeed\WhatYouNeed\bin\System.Web.Mvc.xml
+D:\WhatYouNeed\WhatYouNeed\bin\System.Web.Razor.xml
+D:\WhatYouNeed\WhatYouNeed\bin\System.Web.WebPages.xml
+D:\WhatYouNeed\WhatYouNeed\bin\System.Web.WebPages.Deployment.xml
+D:\WhatYouNeed\WhatYouNeed\bin\System.Web.WebPages.Razor.xml
+D:\WhatYouNeed\WhatYouNeed\obj\Debug\WhatYouNeed.dll
+D:\WhatYouNeed\WhatYouNeed\obj\Debug\WhatYouNeed.pdb
+C:\Users\miguel\Desktop\Whatyouneed\WhatYouNeed\bin\WhatYouNeed.dll
+C:\Users\miguel\Desktop\Whatyouneed\WhatYouNeed\bin\WhatYouNeed.pdb
+C:\Users\miguel\Desktop\Whatyouneed\WhatYouNeed\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\miguel\Desktop\Whatyouneed\WhatYouNeed\bin\Newtonsoft.Json.dll
+C:\Users\miguel\Desktop\Whatyouneed\WhatYouNeed\bin\System.Net.Http.Formatting.dll
+C:\Users\miguel\Desktop\Whatyouneed\WhatYouNeed\bin\System.Web.Helpers.dll
+C:\Users\miguel\Desktop\Whatyouneed\WhatYouNeed\bin\System.Web.Http.dll
+C:\Users\miguel\Desktop\Whatyouneed\WhatYouNeed\bin\System.Web.Http.WebHost.dll
+C:\Users\miguel\Desktop\Whatyouneed\WhatYouNeed\bin\System.Web.Mvc.dll
+C:\Users\miguel\Desktop\Whatyouneed\WhatYouNeed\bin\System.Web.Razor.dll
+C:\Users\miguel\Desktop\Whatyouneed\WhatYouNeed\bin\System.Web.WebPages.Deployment.dll
+C:\Users\miguel\Desktop\Whatyouneed\WhatYouNeed\bin\System.Web.WebPages.dll
+C:\Users\miguel\Desktop\Whatyouneed\WhatYouNeed\bin\System.Web.WebPages.Razor.dll
+C:\Users\miguel\Desktop\Whatyouneed\WhatYouNeed\bin\Newtonsoft.Json.xml
+C:\Users\miguel\Desktop\Whatyouneed\WhatYouNeed\bin\System.Net.Http.Formatting.xml
+C:\Users\miguel\Desktop\Whatyouneed\WhatYouNeed\bin\System.Web.Helpers.xml
+C:\Users\miguel\Desktop\Whatyouneed\WhatYouNeed\bin\System.Web.Http.xml
+C:\Users\miguel\Desktop\Whatyouneed\WhatYouNeed\bin\System.Web.Http.WebHost.xml
+C:\Users\miguel\Desktop\Whatyouneed\WhatYouNeed\bin\System.Web.Mvc.xml
+C:\Users\miguel\Desktop\Whatyouneed\WhatYouNeed\bin\System.Web.Razor.xml
+C:\Users\miguel\Desktop\Whatyouneed\WhatYouNeed\bin\System.Web.WebPages.xml
+C:\Users\miguel\Desktop\Whatyouneed\WhatYouNeed\bin\System.Web.WebPages.Deployment.xml
+C:\Users\miguel\Desktop\Whatyouneed\WhatYouNeed\bin\System.Web.WebPages.Razor.xml
+C:\Users\miguel\Desktop\Whatyouneed\WhatYouNeed\obj\Debug\WhatYouNeed.dll
+C:\Users\miguel\Desktop\Whatyouneed\WhatYouNeed\obj\Debug\WhatYouNeed.pdb
+C:\Users\miguel\Desktop\Whatyouneed\WhatYouNeed\obj\Debug\WhatYouNeed.csprojResolveAssemblyReference.cache
+D:\WhatYouNeed\WhatYouNeed\obj\Debug\WhatYouNeed.csprojResolveAssemblyReference.cache
+C:\Users\Dell User\Documents\Proyecto Monografico\Whatyouneed\WhatYouNeed\bin\WhatYouNeed.dll
+C:\Users\Dell User\Documents\Proyecto Monografico\Whatyouneed\WhatYouNeed\bin\WhatYouNeed.pdb
+C:\Users\Dell User\Documents\Proyecto Monografico\Whatyouneed\WhatYouNeed\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Dell User\Documents\Proyecto Monografico\Whatyouneed\WhatYouNeed\bin\Newtonsoft.Json.dll
+C:\Users\Dell User\Documents\Proyecto Monografico\Whatyouneed\WhatYouNeed\bin\System.Net.Http.Formatting.dll
+C:\Users\Dell User\Documents\Proyecto Monografico\Whatyouneed\WhatYouNeed\bin\System.Web.Helpers.dll
+C:\Users\Dell User\Documents\Proyecto Monografico\Whatyouneed\WhatYouNeed\bin\System.Web.Http.dll
+C:\Users\Dell User\Documents\Proyecto Monografico\Whatyouneed\WhatYouNeed\bin\System.Web.Http.WebHost.dll
+C:\Users\Dell User\Documents\Proyecto Monografico\Whatyouneed\WhatYouNeed\bin\System.Web.Mvc.dll
+C:\Users\Dell User\Documents\Proyecto Monografico\Whatyouneed\WhatYouNeed\bin\System.Web.Razor.dll
+C:\Users\Dell User\Documents\Proyecto Monografico\Whatyouneed\WhatYouNeed\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Dell User\Documents\Proyecto Monografico\Whatyouneed\WhatYouNeed\bin\System.Web.WebPages.dll
+C:\Users\Dell User\Documents\Proyecto Monografico\Whatyouneed\WhatYouNeed\bin\System.Web.WebPages.Razor.dll
+C:\Users\Dell User\Documents\Proyecto Monografico\Whatyouneed\WhatYouNeed\bin\Newtonsoft.Json.xml
+C:\Users\Dell User\Documents\Proyecto Monografico\Whatyouneed\WhatYouNeed\bin\System.Net.Http.Formatting.xml
+C:\Users\Dell User\Documents\Proyecto Monografico\Whatyouneed\WhatYouNeed\bin\System.Web.Helpers.xml
+C:\Users\Dell User\Documents\Proyecto Monografico\Whatyouneed\WhatYouNeed\bin\System.Web.Http.xml
+C:\Users\Dell User\Documents\Proyecto Monografico\Whatyouneed\WhatYouNeed\bin\System.Web.Http.WebHost.xml
+C:\Users\Dell User\Documents\Proyecto Monografico\Whatyouneed\WhatYouNeed\bin\System.Web.Mvc.xml
+C:\Users\Dell User\Documents\Proyecto Monografico\Whatyouneed\WhatYouNeed\bin\System.Web.Razor.xml
+C:\Users\Dell User\Documents\Proyecto Monografico\Whatyouneed\WhatYouNeed\bin\System.Web.WebPages.xml
+C:\Users\Dell User\Documents\Proyecto Monografico\Whatyouneed\WhatYouNeed\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Dell User\Documents\Proyecto Monografico\Whatyouneed\WhatYouNeed\bin\System.Web.WebPages.Razor.xml
+C:\Users\Dell User\Documents\Proyecto Monografico\Whatyouneed\WhatYouNeed\obj\Debug\WhatYouNeed.csprojResolveAssemblyReference.cache
+C:\Users\Dell User\Documents\Proyecto Monografico\Whatyouneed\WhatYouNeed\obj\Debug\WhatYouNeed.dll
+C:\Users\Dell User\Documents\Proyecto Monografico\Whatyouneed\WhatYouNeed\obj\Debug\WhatYouNeed.pdb

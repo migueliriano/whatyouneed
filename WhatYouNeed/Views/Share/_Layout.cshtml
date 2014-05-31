@@ -1,0 +1,84 @@
+﻿@using System.Web.UI.WebControls
+@{
+    var is_loggin = false;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Components/bootstrap_3/css/bootstrap.css")" media="screen" />
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Components/css/style.css")" media="screen" />
+     <script type="text/javascript" src="@Url.Content("~/Components/jquery/jquery_1.11.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Components/bootstrap_3/js/bootstrap.min.js")"></script>
+</head>
+<body>
+    <!-- BEGIN HEADER  -->
+    <div id="header">
+        <div class="container" >
+            <div class="col-xs-2">
+                <a href="@Url.Action("Index","Home")" class="navbar-brand right">
+                    <img alt="Logo WhatYouNeed" src="@Url.Content("~/Components/images/whatyouneed_logo.png")" />
+                </a>
+            </div>
+
+            <div class="col-xs-8 container-search">
+                <input type="text" class="search" placeholder="Buscar" />
+                <input type="submit" value="Buscar" class="button-search .custom-button-blue btn" />
+            </div>
+            @if (@is_loggin)
+            {
+                <div class="col-xs-2 user-registred">
+                    <div class="dropdown">
+                        <a data-toggle="dropdown" class="user-name" href="#">Miguel Angel Liriano
+                            <span class="caret"></span
+                                                    ></a>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                            <li role="presentation">
+                                <a role="menuitem" tabindex="-1" href="#">Acción</a>
+                            </li>
+                            <li role="presentation">
+                                <a role="menuitem" tabindex="-1" href="#">Otra acción</a>
+                            </li>
+                            <li role="presentation">
+                                <a role="menuitem" tabindex="-1" href="#">Configuracion</a>
+                            </li>
+                            <li role="presentation" class="divider"></li>
+                            <li role="presentation">
+                                <a role="menuitem" tabindex="-1" href="#">Salir</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            }
+            else
+            {
+                
+                <span class="user-no-logged">
+                    @Html.ActionLink("Iniciar Sesion","Login","Home") 
+                    |
+                     Registrarse
+                </span>
+            }
+               
+        </div>
+     </div>
+
+        @RenderBody()
+    <div id="footer">
+        <div class="container">
+            <span class="left">COPYRIGHT &copy; 2014 WhatYouNeed</span>
+            <div class="social">
+                <a href="#" title="google plus"><img src="~/Components/images/icons/social/google_plus.png"/></a>
+                <a href="#" title="Twitter"><img src="~/Components/images/icons/social/twitter.png"/></a>
+                <a href="#" title="facebook"><img src="~/Components/images/icons/social/facebook.png"/></a>
+
+            </div>
+        </div>
+        
+    </div>
+
+</body>
+</html>
