@@ -76,3 +76,29 @@ C:\Users\Dell User\Documents\Proyecto Monografico\Whatyouneed\WhatYouNeed\bin\Sy
 C:\Users\Dell User\Documents\Proyecto Monografico\Whatyouneed\WhatYouNeed\obj\Debug\WhatYouNeed.csprojResolveAssemblyReference.cache
 C:\Users\Dell User\Documents\Proyecto Monografico\Whatyouneed\WhatYouNeed\obj\Debug\WhatYouNeed.dll
 C:\Users\Dell User\Documents\Proyecto Monografico\Whatyouneed\WhatYouNeed\obj\Debug\WhatYouNeed.pdb
+C:\Users\Chalie\Documents\Whatyouneed\whatyouneed\WhatYouNeed\bin\WhatYouNeed.dll
+C:\Users\Chalie\Documents\Whatyouneed\whatyouneed\WhatYouNeed\bin\WhatYouNeed.pdb
+C:\Users\Chalie\Documents\Whatyouneed\whatyouneed\WhatYouNeed\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Chalie\Documents\Whatyouneed\whatyouneed\WhatYouNeed\bin\Newtonsoft.Json.dll
+C:\Users\Chalie\Documents\Whatyouneed\whatyouneed\WhatYouNeed\bin\System.Net.Http.Formatting.dll
+C:\Users\Chalie\Documents\Whatyouneed\whatyouneed\WhatYouNeed\bin\System.Web.Helpers.dll
+C:\Users\Chalie\Documents\Whatyouneed\whatyouneed\WhatYouNeed\bin\System.Web.Http.dll
+C:\Users\Chalie\Documents\Whatyouneed\whatyouneed\WhatYouNeed\bin\System.Web.Http.WebHost.dll
+C:\Users\Chalie\Documents\Whatyouneed\whatyouneed\WhatYouNeed\bin\System.Web.Mvc.dll
+C:\Users\Chalie\Documents\Whatyouneed\whatyouneed\WhatYouNeed\bin\System.Web.Razor.dll
+C:\Users\Chalie\Documents\Whatyouneed\whatyouneed\WhatYouNeed\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Chalie\Documents\Whatyouneed\whatyouneed\WhatYouNeed\bin\System.Web.WebPages.dll
+C:\Users\Chalie\Documents\Whatyouneed\whatyouneed\WhatYouNeed\bin\System.Web.WebPages.Razor.dll
+C:\Users\Chalie\Documents\Whatyouneed\whatyouneed\WhatYouNeed\bin\Newtonsoft.Json.xml
+C:\Users\Chalie\Documents\Whatyouneed\whatyouneed\WhatYouNeed\bin\System.Net.Http.Formatting.xml
+C:\Users\Chalie\Documents\Whatyouneed\whatyouneed\WhatYouNeed\bin\System.Web.Helpers.xml
+C:\Users\Chalie\Documents\Whatyouneed\whatyouneed\WhatYouNeed\bin\System.Web.Http.xml
+C:\Users\Chalie\Documents\Whatyouneed\whatyouneed\WhatYouNeed\bin\System.Web.Http.WebHost.xml
+C:\Users\Chalie\Documents\Whatyouneed\whatyouneed\WhatYouNeed\bin\System.Web.Mvc.xml
+C:\Users\Chalie\Documents\Whatyouneed\whatyouneed\WhatYouNeed\bin\System.Web.Razor.xml
+C:\Users\Chalie\Documents\Whatyouneed\whatyouneed\WhatYouNeed\bin\System.Web.WebPages.xml
+C:\Users\Chalie\Documents\Whatyouneed\whatyouneed\WhatYouNeed\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Chalie\Documents\Whatyouneed\whatyouneed\WhatYouNeed\bin\System.Web.WebPages.Razor.xml
+C:\Users\Chalie\Documents\Whatyouneed\whatyouneed\WhatYouNeed\obj\Debug\WhatYouNeed.csprojResolveAssemblyReference.cache
+C:\Users\Chalie\Documents\Whatyouneed\whatyouneed\WhatYouNeed\obj\Debug\WhatYouNeed.dll
+C:\Users\Chalie\Documents\Whatyouneed\whatyouneed\WhatYouNeed\obj\Debug\WhatYouNeed.pdb

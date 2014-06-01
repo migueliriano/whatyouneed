@@ -3,45 +3,36 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Data.SqlClient;
-using System.Web.Configuration;
+using System.Configuration;
+
 
 namespace WhatYouNeed.Models
 {
     public class DBConnection
     {
-        protected SqlConnection SqlConn;
+        // Clase de acceso a datos.
 
-        public bool openConnection(string connection = "DataBaseConnection") 
+        #region "Variables (Clases) de Conexion"
+        private SqlConnection Conexion;
+        #endregion
+
+        //Constructor
+        public DBConnection()
         {
-            SqlConn = new SqlConnection(@WebConfigurationManager.ConnectionStrings[connection].ToString());
-            try
+            Conexion = new SqlConnection(CadenaConexion);
+        }
+        private string CadenaConexion
+        {
+            get
             {
-                bool test = true;
-                if (SqlConn.State.ToString() == "open")
-                {
-                    SqlConn.Open();
-                }
-                return test;
-            }
-            catch (Exception)
-            {
-                
-                throw;
+                return ConfigurationManager.ConnectionStrings["DataBaseConnection"].ToString();
             }
         }
 
-        public bool closeConnection()
+        public SqlConnection ObtenerConexion()
         {
-            try
-            {
-                SqlConn.Close();
-                return true;
-            }
-            catch (Exception)
-            {
-                
-                throw;
-            }
+            return Conexion;
         }
+
     }
 }

@@ -105,6 +105,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Datos\AccountTypesDAL.cs" />
+    <Compile Include="Datos\BrandsDAL.cs" />
+    <Compile Include="Datos\BuyHeaderDAL.cs" />
+    <Compile Include="Datos\Categories.cs" />
+    <Compile Include="Datos\Conditions.cs" />
+    <Compile Include="Datos\CountriesDAL.cs" />
+    <Compile Include="Datos\CurrencyTypesDAL.cs" />
+    <Compile Include="Datos\PayModes.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -114,9 +122,9 @@
     <Compile Include="Models\BuyHeader.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Condition.cs" />
-    <Compile Include="Models\Connection.cs" />
     <Compile Include="Models\Country.cs" />
     <Compile Include="Models\CurrencyType.cs" />
+    <Compile Include="Models\DBConnection.cs" />
     <Compile Include="Models\PayMode.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductImage.cs" />
