@@ -68,11 +68,6 @@ namespace WhatYouNeed.Datos
             }
         }
 
-        /*public Dataset ShowLastId(){
-         * 
-         * 
-         * }*/
-
         public void InsertBrand(Brand brand)
         {
             SqlCommand sqlCommand = new SqlCommand();

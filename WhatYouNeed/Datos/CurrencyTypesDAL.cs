@@ -68,11 +68,6 @@ namespace WhatYouNeed.Datos
             }
         }
 
-        /*public Dataset ShowLastId(){
-         * 
-         * 
-         * }*/
-
         public void InsertCurrencyType(CurrencyType currencyType)
         {
             SqlCommand sqlCommand = new SqlCommand();
@@ -107,7 +102,7 @@ namespace WhatYouNeed.Datos
             try
             {
                 dataBaseConnection.ObtenerConexion().Open();
-                sqlCommand = new SqlCommand("proc_BuyHeaderUpdate", dataBaseConnection.ObtenerConexion());
+                sqlCommand = new SqlCommand("proc_CurrencyTypesUpdate", dataBaseConnection.ObtenerConexion());
                 sqlCommand.CommandType = CommandType.StoredProcedure;
                 sqlCommand.Parameters.AddWithValue("@CurrencyTypeId", currencyType.currencyTypeId);
                 sqlCommand.Parameters.AddWithValue("@Description", currencyType.description);

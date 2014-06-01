@@ -48,7 +48,7 @@ namespace WhatYouNeed.Datos
             try
             {
                 dataBaseConnection.ObtenerConexion().Open();
-                sqlCommand = new SqlCommand("proc_CurrencyTypesLoadByPrimaryKey", dataBaseConnection.ObtenerConexion());
+                sqlCommand = new SqlCommand("proc_PayModesLoadByPrimaryKey", dataBaseConnection.ObtenerConexion());
                 sqlCommand.CommandType = CommandType.StoredProcedure;
                 sqlCommand.Parameters.AddWithValue("@PayModeId", payModeId);
                 sqladapter.SelectCommand = sqlCommand;
@@ -67,12 +67,7 @@ namespace WhatYouNeed.Datos
             }
         }
 
-        /*public Dataset ShowLastId(){
-         * 
-         * 
-         * }*/
-
-        public void InsertCurrencyType(PayMode payMode)
+        public void InsertPayMode(PayMode payMode)
         {
             SqlCommand sqlCommand = new SqlCommand();
             SqlDataAdapter sqladapter = new SqlDataAdapter();
@@ -99,7 +94,7 @@ namespace WhatYouNeed.Datos
             }
         }
 
-        public void UpdateCurrencyType(PayMode payMode)
+        public void UpdatePayMode(PayMode payMode)
         {
             SqlCommand sqlCommand = new SqlCommand();
             SqlDataAdapter sqladapter = new SqlDataAdapter();
@@ -126,7 +121,7 @@ namespace WhatYouNeed.Datos
             }
         }
 
-        public void DeleteCurrencyType(int payModeId)
+        public void DeletePayMode(int payModeId)
         {
             SqlCommand sqlCommand = new SqlCommand();
             SqlDataAdapter sqladapter = new SqlDataAdapter();

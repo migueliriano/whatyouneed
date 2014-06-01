@@ -8,12 +8,12 @@ using WhatYouNeed.Models;
 
 namespace WhatYouNeed.Datos
 {
-    public class Categories
+    public class ProductImagesDAL
     {
 
-        public DataSet ShowAllCategories()
+        public DataSet ShowAllProductImages()
         {
-            DataSet categoriesDataset = new DataSet();
+            DataSet productImagesDataset = new DataSet();
             SqlCommand sqlCommand = new SqlCommand();
             SqlDataAdapter sqladapter = new SqlDataAdapter();
             DBConnection dataBaseConnection = new DBConnection();
@@ -21,12 +21,12 @@ namespace WhatYouNeed.Datos
             try
             {
                 dataBaseConnection.ObtenerConexion().Open();
-                sqlCommand = new SqlCommand("proc_CategoriesLoadAll", dataBaseConnection.ObtenerConexion());
+                sqlCommand = new SqlCommand("proc_ProductImagesLoadAll", dataBaseConnection.ObtenerConexion());
                 sqlCommand.CommandType = CommandType.StoredProcedure;
                 sqladapter.SelectCommand = sqlCommand;
                 sqlCommand.ExecuteNonQuery();
-                sqladapter.Fill(categoriesDataset, "categories");
-                return categoriesDataset;
+                sqladapter.Fill(productImagesDataset, "productImages");
+                return productImagesDataset;
             }
             catch (Exception)
             {
@@ -39,9 +39,9 @@ namespace WhatYouNeed.Datos
             }
         }
 
-        public DataSet ShowCategoryByKey(int categoryId)
+        public DataSet ShowProductImageByKey(int productId)
         {
-            DataSet categoriesDataset = new DataSet();
+            DataSet productImagesDataset = new DataSet();
             SqlCommand sqlCommand = new SqlCommand();
             SqlDataAdapter sqladapter = new SqlDataAdapter();
             DBConnection dataBaseConnection = new DBConnection();
@@ -49,13 +49,13 @@ namespace WhatYouNeed.Datos
             try
             {
                 dataBaseConnection.ObtenerConexion().Open();
-                sqlCommand = new SqlCommand("proc_CategoriesLoadByPrimaryKey", dataBaseConnection.ObtenerConexion());
+                sqlCommand = new SqlCommand("proc_ProductImagesLoadByPrimaryKey", dataBaseConnection.ObtenerConexion());
                 sqlCommand.CommandType = CommandType.StoredProcedure;
-                sqlCommand.Parameters.AddWithValue("@CategoryId", categoryId);
+                sqlCommand.Parameters.AddWithValue("@ProductId", productId);
                 sqladapter.SelectCommand = sqlCommand;
                 sqlCommand.ExecuteNonQuery();
-                sqladapter.Fill(categoriesDataset, "categoriesByKey");
-                return categoriesDataset;
+                sqladapter.Fill(productImagesDataset, "productImageByKey");
+                return productImagesDataset;
             }
             catch (Exception)
             {
@@ -68,7 +68,7 @@ namespace WhatYouNeed.Datos
             }
         }
 
-        public void InsertCategory(Category category)
+        public void InsertProductImage(ProductImage productImages)
         {
             SqlCommand sqlCommand = new SqlCommand();
             SqlDataAdapter sqladapter = new SqlDataAdapter();
@@ -76,11 +76,11 @@ namespace WhatYouNeed.Datos
             try
             {
                 dataBaseConnection.ObtenerConexion().Open();
-                sqlCommand = new SqlCommand("proc_CategoriesInsert", dataBaseConnection.ObtenerConexion());
+                sqlCommand = new SqlCommand("proc_ProductImagesInsert", dataBaseConnection.ObtenerConexion());
                 sqlCommand.CommandType = CommandType.StoredProcedure;
-                sqlCommand.Parameters.AddWithValue("@CategoryId", category.categoryId);
-                sqlCommand.Parameters.AddWithValue("@Description", category.description);
-                sqlCommand.Parameters.AddWithValue("@CategoryParent", category.description);
+                sqlCommand.Parameters.AddWithValue("@ImageId", productImages.imageId);
+                sqlCommand.Parameters.AddWithValue("@ProductId", productImages.images);
+                sqlCommand.Parameters.AddWithValue("@Images", productImages.productId);
                 sqladapter.InsertCommand = sqlCommand;
                 sqlCommand.ExecuteNonQuery();
             }
@@ -95,7 +95,7 @@ namespace WhatYouNeed.Datos
             }
         }
 
-        public void UpdateCategory(Category category)
+        public void UpdateProductImage(ProductImage productImages)
         {
             SqlCommand sqlCommand = new SqlCommand();
             SqlDataAdapter sqladapter = new SqlDataAdapter();
@@ -103,11 +103,11 @@ namespace WhatYouNeed.Datos
             try
             {
                 dataBaseConnection.ObtenerConexion().Open();
-                sqlCommand = new SqlCommand("proc_CategoriesUpdate", dataBaseConnection.ObtenerConexion());
+                sqlCommand = new SqlCommand("proc_ProductImagesUpdate", dataBaseConnection.ObtenerConexion());
                 sqlCommand.CommandType = CommandType.StoredProcedure;
-                sqlCommand.Parameters.AddWithValue("@CategoryId", category.categoryId);
-                sqlCommand.Parameters.AddWithValue("@Description", category.description);
-                sqlCommand.Parameters.AddWithValue("@CategoryParent", category.categoryParent);
+                sqlCommand.Parameters.AddWithValue("@ImageId", productImages.imageId);
+                sqlCommand.Parameters.AddWithValue("@ProductId", productImages.images);
+                sqlCommand.Parameters.AddWithValue("@Images", productImages.productId);
                 sqladapter.UpdateCommand = sqlCommand;
                 sqlCommand.ExecuteNonQuery();
             }
@@ -122,7 +122,7 @@ namespace WhatYouNeed.Datos
             }
         }
 
-        public void DeleteCategory(int categoryId)
+        public void DeleteProductImage(int productId)
         {
             SqlCommand sqlCommand = new SqlCommand();
             SqlDataAdapter sqladapter = new SqlDataAdapter();
@@ -131,9 +131,9 @@ namespace WhatYouNeed.Datos
             try
             {
                 dataBaseConnection.ObtenerConexion().Open();
-                sqlCommand = new SqlCommand("proc_CategoriesDelete", dataBaseConnection.ObtenerConexion());
+                sqlCommand = new SqlCommand("proc_ProductImagesDelete", dataBaseConnection.ObtenerConexion());
                 sqlCommand.CommandType = CommandType.StoredProcedure;
-                sqlCommand.Parameters.AddWithValue("@CategoryId", categoryId);
+                sqlCommand.Parameters.AddWithValue("@ProductId", productId);
                 sqladapter.DeleteCommand = sqlCommand;
                 sqlCommand.ExecuteNonQuery();
             }

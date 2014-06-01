@@ -67,11 +67,6 @@ namespace WhatYouNeed.Datos
             }
         }
 
-        /*public Dataset ShowLastId(){
-         * 
-         * 
-         * }*/ 
-
         public void InsertCountry(Country country)
         {
             SqlCommand sqlCommand = new SqlCommand();

@@ -68,11 +68,6 @@ namespace WhatYouNeed.Datos
             }
         }
 
-        /*public Dataset ShowLastId(){
-         * 
-         * 
-         * }*/
-
         public void InsertBuyHeader(BuyHeader buyHeader)
         {
             SqlCommand sqlCommand = new SqlCommand();

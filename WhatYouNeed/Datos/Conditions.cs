@@ -21,11 +21,11 @@ namespace WhatYouNeed.Datos
             try
             {
                 dataBaseConnection.ObtenerConexion().Open();
-                sqlCommand = new SqlCommand("proc_CategoriesLoadAll", dataBaseConnection.ObtenerConexion());
+                sqlCommand = new SqlCommand("proc_ConditionsLoadAll", dataBaseConnection.ObtenerConexion());
                 sqlCommand.CommandType = CommandType.StoredProcedure;
                 sqladapter.SelectCommand = sqlCommand;
                 sqlCommand.ExecuteNonQuery();
-                sqladapter.Fill(conditionsDataset, "categories");
+                sqladapter.Fill(conditionsDataset, "conditions");
                 return conditionsDataset;
             }
             catch (Exception)
@@ -67,11 +67,6 @@ namespace WhatYouNeed.Datos
                 dataBaseConnection.ObtenerConexion().Close();
             }
         }
-
-        /*public Dataset ShowLastId(){
-         * 
-         * 
-         * }*/
 
         public void InsertCondition(Condition condition)
         {

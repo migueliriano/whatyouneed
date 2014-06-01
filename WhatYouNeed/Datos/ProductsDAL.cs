@@ -8,12 +8,12 @@ using WhatYouNeed.Models;
 
 namespace WhatYouNeed.Datos
 {
-    public class Categories
+    public class ProductsDAL
     {
 
-        public DataSet ShowAllCategories()
+        public DataSet ShowAllProducts()
         {
-            DataSet categoriesDataset = new DataSet();
+            DataSet ProductsDataset = new DataSet();
             SqlCommand sqlCommand = new SqlCommand();
             SqlDataAdapter sqladapter = new SqlDataAdapter();
             DBConnection dataBaseConnection = new DBConnection();
@@ -21,12 +21,12 @@ namespace WhatYouNeed.Datos
             try
             {
                 dataBaseConnection.ObtenerConexion().Open();
-                sqlCommand = new SqlCommand("proc_CategoriesLoadAll", dataBaseConnection.ObtenerConexion());
+                sqlCommand = new SqlCommand("proc_ProductLoadAll", dataBaseConnection.ObtenerConexion());
                 sqlCommand.CommandType = CommandType.StoredProcedure;
                 sqladapter.SelectCommand = sqlCommand;
                 sqlCommand.ExecuteNonQuery();
-                sqladapter.Fill(categoriesDataset, "categories");
-                return categoriesDataset;
+                sqladapter.Fill(ProductsDataset, "products");
+                return ProductsDataset;
             }
             catch (Exception)
             {
@@ -39,9 +39,9 @@ namespace WhatYouNeed.Datos
             }
         }
 
-        public DataSet ShowCategoryByKey(int categoryId)
+        public DataSet ShowProductsByKey(int productId)
         {
-            DataSet categoriesDataset = new DataSet();
+            DataSet ProductsDataset = new DataSet();
             SqlCommand sqlCommand = new SqlCommand();
             SqlDataAdapter sqladapter = new SqlDataAdapter();
             DBConnection dataBaseConnection = new DBConnection();
@@ -49,13 +49,13 @@ namespace WhatYouNeed.Datos
             try
             {
                 dataBaseConnection.ObtenerConexion().Open();
-                sqlCommand = new SqlCommand("proc_CategoriesLoadByPrimaryKey", dataBaseConnection.ObtenerConexion());
+                sqlCommand = new SqlCommand("proc_ProductLoadByPrimaryKey", dataBaseConnection.ObtenerConexion());
                 sqlCommand.CommandType = CommandType.StoredProcedure;
-                sqlCommand.Parameters.AddWithValue("@CategoryId", categoryId);
+                sqlCommand.Parameters.AddWithValue("@ProductId", productId);
                 sqladapter.SelectCommand = sqlCommand;
                 sqlCommand.ExecuteNonQuery();
-                sqladapter.Fill(categoriesDataset, "categoriesByKey");
-                return categoriesDataset;
+                sqladapter.Fill(ProductsDataset, "productByKey");
+                return ProductsDataset;
             }
             catch (Exception)
             {
@@ -68,7 +68,7 @@ namespace WhatYouNeed.Datos
             }
         }
 
-        public void InsertCategory(Category category)
+        public void InsertProducts(AccountType accountType)
         {
             SqlCommand sqlCommand = new SqlCommand();
             SqlDataAdapter sqladapter = new SqlDataAdapter();
@@ -76,11 +76,20 @@ namespace WhatYouNeed.Datos
             try
             {
                 dataBaseConnection.ObtenerConexion().Open();
-                sqlCommand = new SqlCommand("proc_CategoriesInsert", dataBaseConnection.ObtenerConexion());
+                sqlCommand = new SqlCommand("proc_ProductInsert", dataBaseConnection.ObtenerConexion());
                 sqlCommand.CommandType = CommandType.StoredProcedure;
-                sqlCommand.Parameters.AddWithValue("@CategoryId", category.categoryId);
-                sqlCommand.Parameters.AddWithValue("@Description", category.description);
-                sqlCommand.Parameters.AddWithValue("@CategoryParent", category.description);
+                sqlCommand.Parameters.AddWithValue("@ProductId", accountType.accountId);
+                sqlCommand.Parameters.AddWithValue("@Description", accountType.description);
+                sqlCommand.Parameters.AddWithValue("@CountryId", accountType.accountId);
+                sqlCommand.Parameters.AddWithValue("@StateId", accountType.description);
+                sqlCommand.Parameters.AddWithValue("@Price", accountType.accountId);
+                sqlCommand.Parameters.AddWithValue("@CurrencyTypeId", accountType.description);
+                sqlCommand.Parameters.AddWithValue("@ConditionId", accountType.accountId);
+                sqlCommand.Parameters.AddWithValue("@Stock", accountType.description);
+                sqlCommand.Parameters.AddWithValue("@CategoryId", accountType.accountId);
+                sqlCommand.Parameters.AddWithValue("@ServiceId", accountType.description);
+                sqlCommand.Parameters.AddWithValue("@BrandId", accountType.accountId);
+                sqlCommand.Parameters.AddWithValue("@UserId", accountType.description);
                 sqladapter.InsertCommand = sqlCommand;
                 sqlCommand.ExecuteNonQuery();
             }
@@ -95,7 +104,7 @@ namespace WhatYouNeed.Datos
             }
         }
 
-        public void UpdateCategory(Category category)
+        public void UpdateProducts(AccountType accountType)
         {
             SqlCommand sqlCommand = new SqlCommand();
             SqlDataAdapter sqladapter = new SqlDataAdapter();
@@ -103,11 +112,20 @@ namespace WhatYouNeed.Datos
             try
             {
                 dataBaseConnection.ObtenerConexion().Open();
-                sqlCommand = new SqlCommand("proc_CategoriesUpdate", dataBaseConnection.ObtenerConexion());
+                sqlCommand = new SqlCommand("proc_ProductUpdate", dataBaseConnection.ObtenerConexion());
                 sqlCommand.CommandType = CommandType.StoredProcedure;
-                sqlCommand.Parameters.AddWithValue("@CategoryId", category.categoryId);
-                sqlCommand.Parameters.AddWithValue("@Description", category.description);
-                sqlCommand.Parameters.AddWithValue("@CategoryParent", category.categoryParent);
+                sqlCommand.Parameters.AddWithValue("@ProductId", accountType.accountId);
+                sqlCommand.Parameters.AddWithValue("@Description", accountType.description);
+                sqlCommand.Parameters.AddWithValue("@CountryId", accountType.accountId);
+                sqlCommand.Parameters.AddWithValue("@StateId", accountType.description);
+                sqlCommand.Parameters.AddWithValue("@Price", accountType.accountId);
+                sqlCommand.Parameters.AddWithValue("@CurrencyTypeId", accountType.description);
+                sqlCommand.Parameters.AddWithValue("@ConditionId", accountType.accountId);
+                sqlCommand.Parameters.AddWithValue("@Stock", accountType.description);
+                sqlCommand.Parameters.AddWithValue("@CategoryId", accountType.accountId);
+                sqlCommand.Parameters.AddWithValue("@ServiceId", accountType.description);
+                sqlCommand.Parameters.AddWithValue("@BrandId", accountType.accountId);
+                sqlCommand.Parameters.AddWithValue("@UserId", accountType.description);
                 sqladapter.UpdateCommand = sqlCommand;
                 sqlCommand.ExecuteNonQuery();
             }
@@ -122,7 +140,7 @@ namespace WhatYouNeed.Datos
             }
         }
 
-        public void DeleteCategory(int categoryId)
+        public void DeleteProducts(int productId)
         {
             SqlCommand sqlCommand = new SqlCommand();
             SqlDataAdapter sqladapter = new SqlDataAdapter();
@@ -131,9 +149,9 @@ namespace WhatYouNeed.Datos
             try
             {
                 dataBaseConnection.ObtenerConexion().Open();
-                sqlCommand = new SqlCommand("proc_CategoriesDelete", dataBaseConnection.ObtenerConexion());
+                sqlCommand = new SqlCommand("proc_ProductDelete", dataBaseConnection.ObtenerConexion());
                 sqlCommand.CommandType = CommandType.StoredProcedure;
-                sqlCommand.Parameters.AddWithValue("@CategoryId", categoryId);
+                sqlCommand.Parameters.AddWithValue("@ProductId", productId);
                 sqladapter.DeleteCommand = sqlCommand;
                 sqlCommand.ExecuteNonQuery();
             }

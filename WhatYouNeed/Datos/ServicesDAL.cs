@@ -8,12 +8,12 @@ using WhatYouNeed.Models;
 
 namespace WhatYouNeed.Datos
 {
-    public class Categories
+    public class ServicesDAL
     {
 
-        public DataSet ShowAllCategories()
+        public DataSet ShowAllServices()
         {
-            DataSet categoriesDataset = new DataSet();
+            DataSet servicesDataset = new DataSet();
             SqlCommand sqlCommand = new SqlCommand();
             SqlDataAdapter sqladapter = new SqlDataAdapter();
             DBConnection dataBaseConnection = new DBConnection();
@@ -21,12 +21,12 @@ namespace WhatYouNeed.Datos
             try
             {
                 dataBaseConnection.ObtenerConexion().Open();
-                sqlCommand = new SqlCommand("proc_CategoriesLoadAll", dataBaseConnection.ObtenerConexion());
+                sqlCommand = new SqlCommand("proc_ServicesLoadAll", dataBaseConnection.ObtenerConexion());
                 sqlCommand.CommandType = CommandType.StoredProcedure;
                 sqladapter.SelectCommand = sqlCommand;
                 sqlCommand.ExecuteNonQuery();
-                sqladapter.Fill(categoriesDataset, "categories");
-                return categoriesDataset;
+                sqladapter.Fill(servicesDataset, "services");
+                return servicesDataset;
             }
             catch (Exception)
             {
@@ -39,9 +39,9 @@ namespace WhatYouNeed.Datos
             }
         }
 
-        public DataSet ShowCategoryByKey(int categoryId)
+        public DataSet ShowServicesByKey(int serviceId)
         {
-            DataSet categoriesDataset = new DataSet();
+            DataSet servicesDataset = new DataSet();
             SqlCommand sqlCommand = new SqlCommand();
             SqlDataAdapter sqladapter = new SqlDataAdapter();
             DBConnection dataBaseConnection = new DBConnection();
@@ -49,13 +49,13 @@ namespace WhatYouNeed.Datos
             try
             {
                 dataBaseConnection.ObtenerConexion().Open();
-                sqlCommand = new SqlCommand("proc_CategoriesLoadByPrimaryKey", dataBaseConnection.ObtenerConexion());
+                sqlCommand = new SqlCommand("proc_ServicesLoadByPrimaryKey", dataBaseConnection.ObtenerConexion());
                 sqlCommand.CommandType = CommandType.StoredProcedure;
-                sqlCommand.Parameters.AddWithValue("@CategoryId", categoryId);
+                sqlCommand.Parameters.AddWithValue("@ServiceId", serviceId);
                 sqladapter.SelectCommand = sqlCommand;
                 sqlCommand.ExecuteNonQuery();
-                sqladapter.Fill(categoriesDataset, "categoriesByKey");
-                return categoriesDataset;
+                sqladapter.Fill(servicesDataset, "servicesByKey");
+                return servicesDataset;
             }
             catch (Exception)
             {
@@ -68,7 +68,7 @@ namespace WhatYouNeed.Datos
             }
         }
 
-        public void InsertCategory(Category category)
+        public void InsertService(Service service)
         {
             SqlCommand sqlCommand = new SqlCommand();
             SqlDataAdapter sqladapter = new SqlDataAdapter();
@@ -76,11 +76,10 @@ namespace WhatYouNeed.Datos
             try
             {
                 dataBaseConnection.ObtenerConexion().Open();
-                sqlCommand = new SqlCommand("proc_CategoriesInsert", dataBaseConnection.ObtenerConexion());
+                sqlCommand = new SqlCommand("proc_ServicesInsert", dataBaseConnection.ObtenerConexion());
                 sqlCommand.CommandType = CommandType.StoredProcedure;
-                sqlCommand.Parameters.AddWithValue("@CategoryId", category.categoryId);
-                sqlCommand.Parameters.AddWithValue("@Description", category.description);
-                sqlCommand.Parameters.AddWithValue("@CategoryParent", category.description);
+                sqlCommand.Parameters.AddWithValue("@ServiceId", service.serviceId);
+                sqlCommand.Parameters.AddWithValue("@Description", service.description);
                 sqladapter.InsertCommand = sqlCommand;
                 sqlCommand.ExecuteNonQuery();
             }
@@ -95,7 +94,7 @@ namespace WhatYouNeed.Datos
             }
         }
 
-        public void UpdateCategory(Category category)
+        public void UpdateService(Service service)
         {
             SqlCommand sqlCommand = new SqlCommand();
             SqlDataAdapter sqladapter = new SqlDataAdapter();
@@ -103,11 +102,10 @@ namespace WhatYouNeed.Datos
             try
             {
                 dataBaseConnection.ObtenerConexion().Open();
-                sqlCommand = new SqlCommand("proc_CategoriesUpdate", dataBaseConnection.ObtenerConexion());
+                sqlCommand = new SqlCommand("proc_ServicesUpdate", dataBaseConnection.ObtenerConexion());
                 sqlCommand.CommandType = CommandType.StoredProcedure;
-                sqlCommand.Parameters.AddWithValue("@CategoryId", category.categoryId);
-                sqlCommand.Parameters.AddWithValue("@Description", category.description);
-                sqlCommand.Parameters.AddWithValue("@CategoryParent", category.categoryParent);
+                sqlCommand.Parameters.AddWithValue("@ServiceId", service.serviceId);
+                sqlCommand.Parameters.AddWithValue("@Description", service.description);
                 sqladapter.UpdateCommand = sqlCommand;
                 sqlCommand.ExecuteNonQuery();
             }
@@ -122,7 +120,7 @@ namespace WhatYouNeed.Datos
             }
         }
 
-        public void DeleteCategory(int categoryId)
+        public void DeleteService(int serviceId)
         {
             SqlCommand sqlCommand = new SqlCommand();
             SqlDataAdapter sqladapter = new SqlDataAdapter();
@@ -131,9 +129,9 @@ namespace WhatYouNeed.Datos
             try
             {
                 dataBaseConnection.ObtenerConexion().Open();
-                sqlCommand = new SqlCommand("proc_CategoriesDelete", dataBaseConnection.ObtenerConexion());
+                sqlCommand = new SqlCommand("proc_ServicesDelete", dataBaseConnection.ObtenerConexion());
                 sqlCommand.CommandType = CommandType.StoredProcedure;
-                sqlCommand.Parameters.AddWithValue("@CategoryId", categoryId);
+                sqlCommand.Parameters.AddWithValue("@ServiceId", serviceId);
                 sqladapter.DeleteCommand = sqlCommand;
                 sqlCommand.ExecuteNonQuery();
             }

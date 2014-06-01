@@ -113,6 +113,11 @@
     <Compile Include="Datos\CountriesDAL.cs" />
     <Compile Include="Datos\CurrencyTypesDAL.cs" />
     <Compile Include="Datos\PayModes.cs" />
+    <Compile Include="Datos\ProductImagesDAL.cs" />
+    <Compile Include="Datos\ProductsDAL.cs" />
+    <Compile Include="Datos\ServicesDAL.cs" />
+    <Compile Include="Datos\StatesDAL.cs" />
+    <Compile Include="Datos\UsersDAL.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

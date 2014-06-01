@@ -8,9 +8,10 @@ using WhatYouNeed.Models;
 
 namespace WhatYouNeed.Datos
 {
-    public class AccountTypesDAL
+    public class UsersDAL
     {
-        public DataSet ShowAllAccountTypes()
+
+        public DataSet ShowAllUsers()
         {
             DataSet accountTypesDataset = new DataSet();
             SqlCommand sqlCommand = new SqlCommand();
@@ -20,11 +21,11 @@ namespace WhatYouNeed.Datos
             try
             {
                 dataBaseConnection.ObtenerConexion().Open();
-                sqlCommand = new SqlCommand("proc_AccountTypeLoadAll", dataBaseConnection.ObtenerConexion());
+                sqlCommand = new SqlCommand("proc_UserLoadAll", dataBaseConnection.ObtenerConexion());
                 sqlCommand.CommandType = CommandType.StoredProcedure;
                 sqladapter.SelectCommand = sqlCommand;
                 sqlCommand.ExecuteNonQuery();
-                sqladapter.Fill(accountTypesDataset, "accountTypes");
+                sqladapter.Fill(accountTypesDataset, "users");
                 return accountTypesDataset;
             }
             catch (Exception)
@@ -38,9 +39,9 @@ namespace WhatYouNeed.Datos
             }
         }
 
-        public DataSet ShowAccountTypeByKey(int accountTypeId)
+        public DataSet ShowUserByKey(int userId)
         {
-            DataSet accountTypesDataset = new DataSet();
+            DataSet userDataset = new DataSet();
             SqlCommand sqlCommand = new SqlCommand();
             SqlDataAdapter sqladapter = new SqlDataAdapter();
             DBConnection dataBaseConnection = new DBConnection();
@@ -48,13 +49,13 @@ namespace WhatYouNeed.Datos
             try
             {
                 dataBaseConnection.ObtenerConexion().Open();
-                sqlCommand = new SqlCommand("proc_AccountTypeLoadByPrimaryKey", dataBaseConnection.ObtenerConexion());
+                sqlCommand = new SqlCommand("proc_UserLoadByPrimaryKey", dataBaseConnection.ObtenerConexion());
                 sqlCommand.CommandType = CommandType.StoredProcedure;
-                sqlCommand.Parameters.AddWithValue("@AccountId", accountTypeId);
+                sqlCommand.Parameters.AddWithValue("@UserId", userId);
                 sqladapter.SelectCommand = sqlCommand;
                 sqlCommand.ExecuteNonQuery();
-                sqladapter.Fill(accountTypesDataset, "accountTypesByKey");
-                return accountTypesDataset;
+                sqladapter.Fill(userDataset, "userByKey");
+                return userDataset;
             }
             catch (Exception)
             {
@@ -67,7 +68,7 @@ namespace WhatYouNeed.Datos
             }
         }
 
-        public void InsertAccountType(AccountType accountType)
+        public void InsertUser(User user)
         {
             SqlCommand sqlCommand = new SqlCommand();
             SqlDataAdapter sqladapter = new SqlDataAdapter();
@@ -75,10 +76,23 @@ namespace WhatYouNeed.Datos
             try
             {
                 dataBaseConnection.ObtenerConexion().Open();
-                sqlCommand = new SqlCommand("proc_AccountTypeInsert", dataBaseConnection.ObtenerConexion());
+                sqlCommand = new SqlCommand("proc_UserInsert", dataBaseConnection.ObtenerConexion());
                 sqlCommand.CommandType = CommandType.StoredProcedure;
-                sqlCommand.Parameters.AddWithValue("@AccountId", accountType.accountId);
-                sqlCommand.Parameters.AddWithValue("@Description", accountType.description);
+                sqlCommand.Parameters.AddWithValue("@UserId", user.userId);
+                sqlCommand.Parameters.AddWithValue("@Name", user.name);
+                sqlCommand.Parameters.AddWithValue("@LastName", user.lastName);
+                sqlCommand.Parameters.AddWithValue("@UserName", user.userName);
+                sqlCommand.Parameters.AddWithValue("@PhoneNumber", user.phoneNumber);
+                sqlCommand.Parameters.AddWithValue("@Address", user.address);
+                sqlCommand.Parameters.AddWithValue("@CountryId", user.countryId);
+                sqlCommand.Parameters.AddWithValue("@StateId", user.stateId);
+                sqlCommand.Parameters.AddWithValue("@City", user.city);
+                sqlCommand.Parameters.AddWithValue("@Password", user.password);
+                sqlCommand.Parameters.AddWithValue("@AccountId", user.accountId);
+                sqlCommand.Parameters.AddWithValue("@ProfileImage", user.profileImage);
+                sqlCommand.Parameters.AddWithValue("@SecurityQuestion", user.securityQuestion);
+                sqlCommand.Parameters.AddWithValue("@Answer", user.answer);
+                sqlCommand.Parameters.AddWithValue("@AccountState", user.accountState);
                 sqladapter.InsertCommand = sqlCommand;
                 sqlCommand.ExecuteNonQuery();
             }
@@ -93,7 +107,7 @@ namespace WhatYouNeed.Datos
             }
         }
 
-        public void UpdateAccountType(AccountType accountType)
+        public void UpdateUser(User user)
         {
             SqlCommand sqlCommand = new SqlCommand();
             SqlDataAdapter sqladapter = new SqlDataAdapter();
@@ -101,10 +115,23 @@ namespace WhatYouNeed.Datos
             try
             {
                 dataBaseConnection.ObtenerConexion().Open();
-                sqlCommand = new SqlCommand("proc_AccountTypeUpdate", dataBaseConnection.ObtenerConexion());
+                sqlCommand = new SqlCommand("proc_UserUpdate", dataBaseConnection.ObtenerConexion());
                 sqlCommand.CommandType = CommandType.StoredProcedure;
-                sqlCommand.Parameters.AddWithValue("@AccountId", accountType.accountId);
-                sqlCommand.Parameters.AddWithValue("@Description", accountType.description);
+                sqlCommand.Parameters.AddWithValue("@UserId", user.userId);
+                sqlCommand.Parameters.AddWithValue("@Name", user.name);
+                sqlCommand.Parameters.AddWithValue("@LastName", user.lastName);
+                sqlCommand.Parameters.AddWithValue("@UserName", user.userName);
+                sqlCommand.Parameters.AddWithValue("@PhoneNumber", user.phoneNumber);
+                sqlCommand.Parameters.AddWithValue("@Address", user.address);
+                sqlCommand.Parameters.AddWithValue("@CountryId", user.countryId);
+                sqlCommand.Parameters.AddWithValue("@StateId", user.stateId);
+                sqlCommand.Parameters.AddWithValue("@City", user.city);
+                sqlCommand.Parameters.AddWithValue("@Password", user.password);
+                sqlCommand.Parameters.AddWithValue("@AccountId", user.accountId);
+                sqlCommand.Parameters.AddWithValue("@ProfileImage", user.profileImage);
+                sqlCommand.Parameters.AddWithValue("@SecurityQuestion", user.securityQuestion);
+                sqlCommand.Parameters.AddWithValue("@Answer", user.answer);
+                sqlCommand.Parameters.AddWithValue("@AccountState", user.accountState);
                 sqladapter.UpdateCommand = sqlCommand;
                 sqlCommand.ExecuteNonQuery();
             }
@@ -119,7 +146,7 @@ namespace WhatYouNeed.Datos
             }
         }
 
-        public void DeleteAccountType(int accountTypeId)
+        public void DeleteUser(int userId)
         {
             SqlCommand sqlCommand = new SqlCommand();
             SqlDataAdapter sqladapter = new SqlDataAdapter();
@@ -128,9 +155,9 @@ namespace WhatYouNeed.Datos
             try
             {
                 dataBaseConnection.ObtenerConexion().Open();
-                sqlCommand = new SqlCommand("proc_AccountTypeDelete", dataBaseConnection.ObtenerConexion());
+                sqlCommand = new SqlCommand("proc_UserDelete", dataBaseConnection.ObtenerConexion());
                 sqlCommand.CommandType = CommandType.StoredProcedure;
-                sqlCommand.Parameters.AddWithValue("@AccountId", accountTypeId);
+                sqlCommand.Parameters.AddWithValue("@UserId", userId);
                 sqladapter.DeleteCommand = sqlCommand;
                 sqlCommand.ExecuteNonQuery();
             }
@@ -144,5 +171,6 @@ namespace WhatYouNeed.Datos
                 dataBaseConnection.ObtenerConexion().Close();
             }
         }
+
     }
 }
